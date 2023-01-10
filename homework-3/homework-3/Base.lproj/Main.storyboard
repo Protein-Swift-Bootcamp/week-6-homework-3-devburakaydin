@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="homework_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DHp-uN-g6Z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewLayout key="collectionViewLayout" id="V8S-o9-aW2" customClass="PinterestLayout" customModule="homework_3" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="Bme-ZE-mKh" customClass="CollectionViewCell" customModule="homework_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="nMC-lI-tei" userLabel="Container View">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nRK-TV-OMA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="127.33333333333333"/>
+                                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3q-V7-4YY">
+                                                    <rect key="frame" x="4" y="137.33333333333334" width="172" height="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Comment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OU-iS-Ptw">
+                                                    <rect key="frame" x="4" y="156.33333333333334" width="172" height="13.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="3OU-iS-Ptw" secondAttribute="bottom" constant="10" id="AdR-Ag-bak"/>
+                                                <constraint firstAttribute="trailing" secondItem="nRK-TV-OMA" secondAttribute="trailing" id="B4K-59-zDQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="d3q-V7-4YY" secondAttribute="trailing" constant="4" id="Fbn-L3-HtM"/>
+                                                <constraint firstItem="nRK-TV-OMA" firstAttribute="top" secondItem="nMC-lI-tei" secondAttribute="top" id="Jz3-oG-2l1"/>
+                                                <constraint firstItem="3OU-iS-Ptw" firstAttribute="leading" secondItem="nMC-lI-tei" secondAttribute="leading" constant="4" id="N1b-c0-cwg"/>
+                                                <constraint firstItem="3OU-iS-Ptw" firstAttribute="top" secondItem="d3q-V7-4YY" secondAttribute="bottom" constant="2" id="Nbf-rE-cru"/>
+                                                <constraint firstItem="d3q-V7-4YY" firstAttribute="top" secondItem="nRK-TV-OMA" secondAttribute="bottom" constant="10" id="Vam-5p-hON"/>
+                                                <constraint firstAttribute="trailing" secondItem="3OU-iS-Ptw" secondAttribute="trailing" constant="4" id="Wic-hL-Exf"/>
+                                                <constraint firstItem="nRK-TV-OMA" firstAttribute="leading" secondItem="nMC-lI-tei" secondAttribute="leading" id="lMQ-wf-ND0"/>
+                                                <constraint firstItem="d3q-V7-4YY" firstAttribute="leading" secondItem="nMC-lI-tei" secondAttribute="leading" constant="4" id="r72-X1-jn1"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="nMC-lI-tei" firstAttribute="leading" secondItem="Bme-ZE-mKh" secondAttribute="leading" id="5BM-MO-XdV"/>
+                                    <constraint firstAttribute="trailing" secondItem="nMC-lI-tei" secondAttribute="trailing" id="e4u-j8-Llf"/>
+                                    <constraint firstAttribute="bottom" secondItem="nMC-lI-tei" secondAttribute="bottom" id="oSi-sC-9vt"/>
+                                    <constraint firstItem="nMC-lI-tei" firstAttribute="top" secondItem="Bme-ZE-mKh" secondAttribute="top" id="qw9-Kp-x9Q"/>
+                                </constraints>
+                                <size key="customSize" width="180" height="180"/>
+                                <connections>
+                                    <outlet property="captionLabel" destination="d3q-V7-4YY" id="FaG-L7-wFA"/>
+                                    <outlet property="commentLabel" destination="3OU-iS-Ptw" id="cgF-jx-kzg"/>
+                                    <outlet property="containerView" destination="nMC-lI-tei" id="uPf-ZK-seT"/>
+                                    <outlet property="imageView" destination="nRK-TV-OMA" id="oXt-HZ-k7W"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="91" y="-27"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
